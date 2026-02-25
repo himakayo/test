@@ -1,5 +1,5 @@
 <input type="email" id="email" placeholder="メアド入れてね">
-<button onclick="sendMail()">テスト送信！</button>
+<button onclick="sendMail()">送信！</button>
 
 <script>
 async function sendMail() {
@@ -10,4 +10,5 @@ async function sendMail() {
   });
   alert(res.ok ? 'メール飛んだよ！' : '失敗したわ');
 }
+
 </script>
