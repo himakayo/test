@@ -1,0 +1,13 @@
+<input type="email" id="email" placeholder="メアド入れてね">
+<button onclick="sendMail()">テスト送信！</button>
+
+<script>
+async function sendMail() {
+  const email = document.getElementById('email').value;
+  const res = await fetch('/api/send', {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+  });
+  alert(res.ok ? 'メール飛んだよ！' : '失敗したわ');
+}
+</script>
